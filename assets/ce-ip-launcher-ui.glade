@@ -8,67 +8,57 @@
     <property name="resizable">False</property>
     <property name="window_position">center</property>
     <property name="default_width">250</property>
-    <property name="default_height">100</property>
-    <property name="icon_name">COLORED.ico</property>
+    <property name="default_height">120</property>
+    <property name="icon">assets/COLORED.ico</property>
     <property name="gravity">south</property>
     <child type="titlebar">
       <placeholder/>
     </child>
     <child>
-      <object class="GtkBox">
+      <object class="GtkFixed">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
+        <property name="margin_left">8</property>
+        <property name="margin_right">8</property>
+        <property name="margin_top">8</property>
+        <property name="margin_bottom">8</property>
         <child>
           <object class="GtkLabel" id="label.entry">
+            <property name="width_request">100</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_right">146</property>
             <property name="label" translatable="yes">Enter or paste Server IP</property>
           </object>
           <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">0</property>
+            <property name="x">7</property>
+            <property name="y">7</property>
           </packing>
         </child>
         <child>
-          <object class="GtkEntry">
+          <object class="GtkEntry" id="entry.ip">
+            <property name="width_request">345</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="placeholder_text" translatable="yes">192.168.1.1</property>
           </object>
           <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">1</property>
+            <property name="x">7</property>
+            <property name="y">32</property>
           </packing>
         </child>
         <child>
-          <object class="GtkGrid">
+          <object class="GtkButton" id="button.launch">
+            <property name="label" translatable="yes">Launch and Connect</property>
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <child>
-              <object class="GtkButton" id="button.launch">
-                <property name="label" translatable="yes">Launch and Connect</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="image_position">right</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
-              </packing>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
+            <property name="can_focus">True</property>
+            <property name="has_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image_position">right</property>
           </object>
           <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="pack_type">end</property>
-            <property name="position">3</property>
+            <property name="x">187</property>
+            <property name="y">89</property>
           </packing>
         </child>
       </object>

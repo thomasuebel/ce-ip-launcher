@@ -1,4 +1,4 @@
-FROM thomasuebel/fedora-mingw-rust:latest
+FROM etrombly/rust-crosscompile:latest
 
 #
 # Build and package executable
